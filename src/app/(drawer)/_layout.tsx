@@ -1,13 +1,17 @@
-import { Feather } from "@expo/vector-icons"
 import { Drawer } from "expo-router/drawer"
+import { Feather } from "@expo/vector-icons"
+
+import { CustomDrawer } from "@/components/CustomDrawer"
 
 export default function DrawerLayout() {
   return (
     <Drawer
+      drawerContent={(props) => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
         drawerActiveTintColor: "#FFF",
         drawerActiveBackgroundColor: "#2b2b2b",
+        drawerInactiveTintColor: "#999",
       }}
     >
       <Drawer.Screen
