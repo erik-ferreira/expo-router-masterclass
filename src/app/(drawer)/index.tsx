@@ -1,8 +1,12 @@
 import { StyleSheet, Text, View } from "react-native"
 
+import { HeaderDrawer } from "@/components/HeaderDrawer"
+
 export default function Home() {
   return (
     <View style={styles.container}>
+      <HeaderDrawer />
+
       <Text style={styles.title}>Home</Text>
     </View>
   )

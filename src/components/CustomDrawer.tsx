@@ -3,7 +3,9 @@ import {
   DrawerContentScrollView,
   DrawerContentComponentProps,
 } from "@react-navigation/drawer"
-import { View, Text, StyleSheet } from "react-native"
+import { View, StyleSheet } from "react-native"
+
+import { FooterDrawer } from "./FooterDrawer"
 
 interface CustomDrawerProps extends DrawerContentComponentProps {}
 
@@ -13,6 +15,8 @@ export function CustomDrawer({ ...rest }: CustomDrawerProps) {
       <DrawerContentScrollView>
         <DrawerItemList {...rest} />
       </DrawerContentScrollView>
+
+      <FooterDrawer />
     </View>
   )
 }
