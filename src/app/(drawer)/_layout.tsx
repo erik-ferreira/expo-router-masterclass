@@ -23,6 +23,18 @@ export default function DrawerLayout() {
           ),
         }}
       />
+
+      <Drawer.Screen
+        name="posts"
+        options={{
+          // drawerItemStyle: { display: "none" } // Hide this screen from drawer
+          drawerLabel: "Posts",
+          drawerIcon: ({ size, color }) => (
+            <Feather name="edit" size={size} color={color} />
+          ),
+        }}
+      />
+
       <Drawer.Screen
         name="schedules"
         options={{

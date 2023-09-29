@@ -1,13 +1,18 @@
+import { Link } from "expo-router"
 import { StyleSheet, Text, View } from "react-native"
 
 import { HeaderDrawer } from "@/components/HeaderDrawer"
 
-export default function Schedules() {
+export default function NewPost() {
   return (
     <View style={styles.container}>
       <HeaderDrawer />
 
-      <Text style={styles.title}>Schedules</Text>
+      <Text style={styles.title}>Novo Post</Text>
+
+      <Link href="/posts/" style={styles.button}>
+        Voltar
+      </Link>
     </View>
   )
 }
@@ -23,5 +28,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     color: "#FFF",
+  },
+
+  button: {
+    backgroundColor: "#7159c1",
+    borderRadius: 4,
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    color: "#FFF",
+    fontSize: 16,
   },
 })
